@@ -83,8 +83,8 @@ export const parseDisplay = (props: DisplayProps): SerializedStyles => css({
     filter: props.filter,
 
     borderColor: props.olColor,
-    borderWidth: wrap(props.olWidth),
-    borderStyle: props.olStyle,
+    borderWidth: wrap(props.olWidth = 1),
+    borderStyle: props.olColor ? (props.olStyle ?? "solid") : undefined,
 
     visibility:
       props.show === "invisible"

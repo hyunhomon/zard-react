@@ -1,4 +1,7 @@
+import React from 'react';
 import type { Preview } from '@storybook/react-vite'
+import { ThemeProvider } from '@emotion/react'
+import { lightTheme } from '../src/ui/themes'
 
 const preview: Preview = {
   parameters: {
@@ -16,6 +19,13 @@ const preview: Preview = {
       test: 'todo'
     }
   },
+  decorators: [
+    (Story) => (
+      <ThemeProvider theme={lightTheme}>
+        <Story />
+      </ThemeProvider>
+    ),
+  ],
 };
 
 export default preview;
