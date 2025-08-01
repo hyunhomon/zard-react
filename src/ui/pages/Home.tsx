@@ -1,6 +1,16 @@
-function Home() {
+import { useTheme } from "@emotion/react";
+
+import HStack from "../components/core/HStack"
+import VStack from "../components/core/VStack"
+import Text from "../components/core/Text"
+
+const Home = () => {
+    const theme = useTheme()
+
     return (
-        <>Home</>
+        <VStack w="100%" h="100%" align="c" bgColor={theme.colors.bgWeak}>
+            <Text value="Home" font={theme.fonts.ls} color={theme.colors.ctStrong}/>
+        </VStack>
     )
 }
 

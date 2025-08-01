@@ -3,7 +3,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Home from './ui/pages/Home'
 import NotFound from './ui/pages/NotFound'
 
-function Router() {
+const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
