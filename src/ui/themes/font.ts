@@ -1,0 +1,88 @@
+import type { Fonts } from "./type";
+
+export const fonts: Fonts = {
+  xll: {
+    fontFamily: "Pretendard",
+    fontWeight: 800,
+    fontSize: 40,
+    lineHeight: 48,
+    letterSpacing: 0,
+  },
+  xlm: {
+    fontFamily: "Pretendard",
+    fontWeight: 800,
+    fontSize: 36,
+    lineHeight: 44,
+    letterSpacing: 0,
+  },
+  xls: {
+    fontFamily: "Pretendard",
+    fontWeight: 800,
+    fontSize: 32,
+    lineHeight: 40,
+    letterSpacing: 0,
+  },
+  ll: {
+    fontFamily: "Pretendard",
+    fontWeight: 700,
+    fontSize: 28,
+    lineHeight: 34,
+    letterSpacing: 0,
+  },
+  lm: {
+    fontFamily: "Pretendard",
+    fontWeight: 700,
+    fontSize: 24,
+    lineHeight: 28,
+    letterSpacing: 0,
+  },
+  ls: {
+    fontFamily: "Pretendard",
+    fontWeight: 700,
+    fontSize: 20,
+    lineHeight: 24,
+    letterSpacing: 0,
+  },
+  ml: {
+    fontFamily: "Pretendard",
+    fontWeight: 600,
+    fontSize: 18,
+    lineHeight: 22,
+    letterSpacing: 0,
+  },
+  mm: {
+    fontFamily: "Pretendard",
+    fontWeight: 600,
+    fontSize: 16,
+    lineHeight: 20,
+    letterSpacing: 0,
+  },
+  ms: {
+    fontFamily: "Pretendard",
+    fontWeight: 600,
+    fontSize: 14,
+    lineHeight: 18,
+    letterSpacing: 0,
+  },
+  sl: {
+    fontFamily: "Pretendard",
+    fontWeight: 500,
+    fontSize: 16,
+    lineHeight: 20,
+    letterSpacing: 0,
+  },
+  sm: {
+    fontFamily: "Pretendard",
+    fontWeight: 500,
+    fontSize: 14,
+    lineHeight: 18,
+    letterSpacing: 0,
+  },
+  ss: {
+    fontFamily: "Pretendard",
+    fontWeight: 500,
+    fontSize: 12,
+    lineHeight: 16,
+    letterSpacing: 0,
+  },
+};
