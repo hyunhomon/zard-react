@@ -6,6 +6,7 @@ import {
     parsePosition,
     parseFont,
 } from "../../../utils/parseStyles";
+import Skeleton from "../skeleton";
 
 interface TextProps extends SizeProps, PositionProps {
     value?: string;
@@ -22,6 +23,7 @@ const StyledText = styled.span<TextProps>(
 
 const Text = ({ value, font, color, align, ...props }: TextProps) => {
     return (
+        value ?
         <StyledText
             font={font}
             color={color}
@@ -30,6 +32,7 @@ const Text = ({ value, font, color, align, ...props }: TextProps) => {
         >
             {value}
         </StyledText>
+        : <Skeleton w={props.w ?? 60} h={props.h ?? 24} />
     )
 }
 

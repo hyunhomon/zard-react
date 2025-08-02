@@ -6,6 +6,7 @@ import {
     parsePosition,
     parseDisplay,
 } from "../../../utils/parseStyles";
+import Skeleton from "../skeleton";
 
 interface ImageProps extends SizeProps, ShapeProps, PositionProps, DisplayProps {
     src: string;
@@ -23,12 +24,14 @@ const StyledImage = styled.img<ImageProps>(
 
 const Image = ({ src, alt, fit = "cover", ...props }: ImageProps) => {
     return (
+      src ?
       <StyledImage
         src={src}
         alt={alt}
         fit={fit}
         {...props}
       />
+      : <Skeleton w={props.w} h={props.h} />
     );
 };
 
