@@ -30,8 +30,6 @@ export interface SpacingProps {
   mr?: number;
   mb?: number;
   ml?: number;
-
-  gap?: number;
 }
 
 export interface ShapeProps {
@@ -50,6 +48,7 @@ export interface LayoutProps {
     align?: Alignment;
     wrap?: boolean;
     flex?: number;
+    gap?: number | "auto";
 }
 
 export interface PositionProps {

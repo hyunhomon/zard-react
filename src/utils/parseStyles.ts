@@ -36,8 +36,6 @@ export const parseSpacing = (props: SpacingProps): SerializedStyles => css({
     marginRight: wrap(props.mr),
     marginBottom: wrap(props.mb),
     marginLeft: wrap(props.ml),
-
-    gap: wrap(props.gap),
 });
 
 export const parseShape = (props: ShapeProps): SerializedStyles => css({
@@ -58,8 +56,13 @@ export const parseLayout = (props: LayoutProps): SerializedStyles => css({
     flexWrap: props.wrap ? "wrap" : "nowrap",
 
     flex: props.flex,
-    justifyContent: props.dir === "r" ? align(props.align).r : align(props.align).c,
-    alignItems: props.dir === "r" ? align(props.align).c : align(props.align).r,
+    justifyContent: props.dir === "r"
+      ? (props.gap === "auto" ? "space-between" : align(props.align).r)
+      : align(props.align).c,
+    alignItems: props.dir === "r"
+      ? align(props.align).c
+      : (props.gap === "auto" ? "space-between" : align(props.align).r),
+    gap: wrap(props.gap),
 });
 
 export const parsePosition = (props: PositionProps): SerializedStyles => css({
