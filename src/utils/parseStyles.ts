@@ -22,30 +22,24 @@ export const parseSize = (props: SizeProps): SerializedStyles => css({
 
 export const parseSpacing = (props: SpacingProps): SerializedStyles => css({
     padding: wrap(props.p),
-    paddingHorizontal: wrap(props.ph),
-    paddingVertical: wrap(props.pv),
-    paddingTop: wrap(props.pt),
-    paddingRight: wrap(props.pr),
-    paddingBottom: wrap(props.pb),
-    paddingLeft: wrap(props.pl),
+    paddingTop: wrap(props.pv) ?? wrap(props.pt),
+    paddingRight: wrap(props.ph) ?? wrap(props.pr),
+    paddingBottom: wrap(props.pv) ?? wrap(props.pb),
+    paddingLeft: wrap(props.ph) ?? wrap(props.pl),
 
     margin: wrap(props.m),
-    marginHorizontal: wrap(props.mh),
-    marginVertical: wrap(props.mv),
-    marginTop: wrap(props.mt),
-    marginRight: wrap(props.mr),
-    marginBottom: wrap(props.mb),
-    marginLeft: wrap(props.ml),
+    marginTop: wrap(props.mv) ?? wrap(props.mt),
+    marginRight: wrap(props.mh) ?? wrap(props.mr),
+    marginBottom: wrap(props.mv) ?? wrap(props.mb),
+    marginLeft: wrap(props.mh) ?? wrap(props.ml),
 });
 
 export const parseShape = (props: ShapeProps): SerializedStyles => css({
     borderRadius: wrap(props.r),
-    borderTopRadius: wrap(props.rt),
-    borderBottomRadius: wrap(props.rb),
-    borderTopLeftRadius: wrap(props.rtl),
-    borderTopRightRadius: wrap(props.rtr),
-    borderBottomLeftRadius: wrap(props.rbl),
-    borderBottomRightRadius: wrap(props.rbr),
+    borderTopLeftRadius: wrap(props.rt) ?? wrap(props.rtl),
+    borderTopRightRadius: wrap(props.rt) ?? wrap(props.rtr),
+    borderBottomLeftRadius: wrap(props.rb) ?? wrap(props.rbl),
+    borderBottomRightRadius: wrap(props.rb) ?? wrap(props.rbr),
 });
 
 export const parseLayout = (props: LayoutProps): SerializedStyles => css({
